@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מעדכן</string>
+    <string name="settings">הגדרות</string>
+    <string name="version">גירסא</string>
+    <string name="loading">טוען</string>
+    <string name="download">הורד &amp; התקן</string>
+    <string name="navigation_drawer_open">פתח חלון צדדי</string>
+    <string name="navigation_drawer_close">סגור חלון צדדי</string>
+    <string name="download_in_progress">מוריד..</string>
+    <string name="check_settings">הגדרות בדיקת עדכונים</string>
+    <string name="auto_check">בדוק עדכונים באופן אוטומטי</string>
+    <string name="check_every">בדוק כל</string>
+    <string name="whats_new">מה חדש?</string>
+    <string name="system_info">מידע מערכת</string>
+
+    <string name="hour">שעה</string>
+    <string name="hours">שעות</string>
+    <string name="day">יום</string>
+    <string name="days">ימים</string>
+    <string name="week">שבוע</string>
+    <string name="minutes">דקות</string>
+
+    <string name="device">מכשיר</string>
+    <string name="rom_version">גרסאת רום</string>
+    <string name="android_version">גרסאת אנדרואיד</string>
+    <string name="kernel">גרסאת קרנל</string>
+</resources>
