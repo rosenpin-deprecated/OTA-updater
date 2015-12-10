@@ -1,15 +1,13 @@
-package com.github.florent37.materialviewpager;
+package com.github.florent37.materialpager;
 
 import android.content.Context;
-import android.graphics.Rect;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.Window;
 
 import com.nineoldandroids.view.ViewHelper;
 
-import static com.github.florent37.materialviewpager.Utils.dpToPx;
+import static com.github.florent37.materialpager.Utils.dpToPx;
 
 /**
  * Created by florentchampigny on 25/04/15.

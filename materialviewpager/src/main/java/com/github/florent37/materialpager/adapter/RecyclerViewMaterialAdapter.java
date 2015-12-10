@@ -1,11 +1,11 @@
-package com.github.florent37.materialviewpager.adapter;
+package com.github.florent37.materialpager.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.florent37.materialviewpager.R;
+import com.github.florent37.materialpager.R;
 
 /**
  * Created by florentchampigny on 24/04/15.

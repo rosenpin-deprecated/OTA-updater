@@ -1,4 +1,4 @@
-package com.github.florent37.materialviewpager;
+package com.github.florent37.materialpager;
 
 import android.content.Context;
 import android.os.Build;
@@ -22,15 +22,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import static com.github.florent37.materialviewpager.Utils.canScroll;
-import static com.github.florent37.materialviewpager.Utils.colorWithAlpha;
-import static com.github.florent37.materialviewpager.Utils.dpToPx;
-import static com.github.florent37.materialviewpager.Utils.getTheVisibileView;
-import static com.github.florent37.materialviewpager.Utils.minMax;
-import static com.github.florent37.materialviewpager.Utils.scrollTo;
-import static com.github.florent37.materialviewpager.Utils.setBackgroundColor;
-import static com.github.florent37.materialviewpager.Utils.setElevation;
-import static com.github.florent37.materialviewpager.Utils.setScale;
+import static com.github.florent37.materialpager.Utils.canScroll;
+import static com.github.florent37.materialpager.Utils.colorWithAlpha;
+import static com.github.florent37.materialpager.Utils.dpToPx;
+import static com.github.florent37.materialpager.Utils.getTheVisibileView;
+import static com.github.florent37.materialpager.Utils.minMax;
+import static com.github.florent37.materialpager.Utils.scrollTo;
+import static com.github.florent37.materialpager.Utils.setBackgroundColor;
+import static com.github.florent37.materialpager.Utils.setElevation;
+import static com.github.florent37.materialpager.Utils.setScale;
 
 /**
  * Created by florentchampigny on 24/04/15.

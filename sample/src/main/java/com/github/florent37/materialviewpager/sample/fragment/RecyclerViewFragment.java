@@ -9,8 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
-import com.github.florent37.materialviewpager.adapter.RecyclerViewMaterialAdapter;
+import com.github.florent37.materialpager.MaterialViewPagerHelper;
+import com.github.florent37.materialpager.adapter.RecyclerViewMaterialAdapter;
 import com.github.florent37.materialviewpager.sample.R;
 import com.github.florent37.materialviewpager.sample.utils.CardsRecyclerViewAdapter;
 import com.parse.FindCallback;

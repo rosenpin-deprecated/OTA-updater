@@ -1,4 +1,4 @@
-package com.github.florent37.materialviewpager;
+package com.github.florent37.materialpager;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -17,8 +17,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.github.florent37.materialviewpager.header.HeaderDesign;
-import com.github.florent37.materialviewpager.header.MaterialViewPagerImageHelper;
+import com.github.florent37.materialpager.header.HeaderDesign;
+import com.github.florent37.materialpager.header.MaterialViewPagerImageHelper;
 import com.nineoldandroids.view.ViewHelper;
 
 /**
@@ -111,14 +111,14 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
         super.onFinishInflate();
 
         //add @layout/material_view_pager_layout as child, containing all the MaterialViewPager views
-        addView(LayoutInflater.from(getContext()).inflate(R.layout.material_view_pager_layout, this, false));
+        addView(LayoutInflater.from(getContext()).inflate(com.github.florent37.materialpager.R.layout.material_view_pager_layout, this, false));
 
-        headerBackgroundContainer = (ViewGroup) findViewById(R.id.headerBackgroundContainer);
-        pagerTitleStripContainer = (ViewGroup) findViewById(R.id.pagerTitleStripContainer);
-        logoContainer = (ViewGroup) findViewById(R.id.logoContainer);
+        headerBackgroundContainer = (ViewGroup) findViewById(com.github.florent37.materialpager.R.id.headerBackgroundContainer);
+        pagerTitleStripContainer = (ViewGroup) findViewById(com.github.florent37.materialpager.R.id.pagerTitleStripContainer);
+        logoContainer = (ViewGroup) findViewById(com.github.florent37.materialpager.R.id.logoContainer);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
+        mToolbar = (Toolbar) findViewById(com.github.florent37.materialpager.R.id.toolbar);
+        mViewPager = (ViewPager) findViewById(com.github.florent37.materialpager.R.id.viewPager);
 
         mViewPager.addOnPageChangeListener(this);
 
@@ -128,16 +128,16 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
             int headerId = settings.headerLayoutId;
             if (headerId == -1) {
                 if (settings.animatedHeaderImage)
-                    headerId = R.layout.material_view_pager_moving_header;
+                    headerId = com.github.florent37.materialpager.R.layout.material_view_pager_moving_header;
                 else
-                    headerId = R.layout.material_view_pager_imageview_header;
+                    headerId = com.github.florent37.materialpager.R.layout.material_view_pager_imageview_header;
             }
             headerBackgroundContainer.addView(LayoutInflater.from(getContext()).inflate(headerId, headerBackgroundContainer, false));
         }
 
         if (isInEditMode()) { //preview titlestrip
             //add fake tabs on edit mode
-            settings.pagerTitleStripId = R.layout.tools_material_view_pager_pagertitlestrip;
+            settings.pagerTitleStripId = com.github.florent37.materialpager.R.layout.tools_material_view_pager_pagertitlestrip;
         }
         if (settings.pagerTitleStripId != -1) {
             pagerTitleStripContainer.addView(LayoutInflater.from(getContext()).inflate(settings.pagerTitleStripId, pagerTitleStripContainer, false));
@@ -152,8 +152,8 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
             }
         }
 
-        headerBackground = findViewById(R.id.headerBackground);
-        toolbarLayoutBackground = findViewById(R.id.toolbar_layout_background);
+        headerBackground = findViewById(com.github.florent37.materialpager.R.id.headerBackground);
+        toolbarLayoutBackground = findViewById(com.github.florent37.materialpager.R.id.toolbar_layout_background);
 
         initialiseHeights();
 
@@ -164,7 +164,7 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
                     .withToolbarLayoutBackground(toolbarLayoutBackground)
                     .withPagerSlidingTabStrip(pagerTitleStripContainer)
                     .withHeaderBackground(headerBackground)
-                    .withStatusBackground(findViewById(R.id.statusBackground))
+                    .withStatusBackground(findViewById(com.github.florent37.materialpager.R.id.statusBackground))
                     .withLogo(logoContainer);
 
             //and construct the MaterialViewPagerAnimator
@@ -173,7 +173,7 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
         } else {
 
             //if in edit mode, add fake cardsviews
-            View sample = LayoutInflater.from(getContext()).inflate(R.layout.tools_list_items, pagerTitleStripContainer, false);
+            View sample = LayoutInflater.from(getContext()).inflate(com.github.florent37.materialpager.R.layout.tools_list_items, pagerTitleStripContainer, false);
 
             FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) sample.getLayoutParams();
             int marginTop = Math.round(Utils.dpToPx(settings.headerHeight + 10, getContext()));
@@ -222,7 +222,7 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
      * @return the displayed tabs
      */
     public PagerSlidingTabStrip getPagerTitleStrip() {
-        return (PagerSlidingTabStrip) pagerTitleStripContainer.findViewById(R.id.materialviewpager_pagerTitleStrip);
+        return (PagerSlidingTabStrip) pagerTitleStripContainer.findViewById(com.github.florent37.materialpager.R.id.materialviewpager_pagerTitleStrip);
     }
 
     /**
@@ -240,7 +240,7 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
      */
     public void setImageUrl(String imageUrl, int fadeDuration) {
         if (imageUrl != null) {
-            final ImageView headerBackgroundImage = (ImageView) findViewById(R.id.materialviewpager_imageHeader);
+            final ImageView headerBackgroundImage = (ImageView) findViewById(com.github.florent37.materialpager.R.id.materialviewpager_imageHeader);
             //if using MaterialViewPagerImageHeader
             if (headerBackgroundImage != null) {
                 ViewHelper.setAlpha(headerBackgroundImage, settings.headerAlpha);
@@ -255,7 +255,7 @@ public class MaterialViewPager extends FrameLayout implements ViewPager.OnPageCh
      */
     public void setImageDrawable(Drawable drawable, int fadeDuration) {
         if (drawable != null) {
-            final ImageView headerBackgroundImage = (ImageView) findViewById(R.id.materialviewpager_imageHeader);
+            final ImageView headerBackgroundImage = (ImageView) findViewById(com.github.florent37.materialpager.R.id.materialviewpager_imageHeader);
             //if using MaterialViewPagerImageHeader
             if (headerBackgroundImage != null) {
                 ViewHelper.setAlpha(headerBackgroundImage, settings.headerAlpha);

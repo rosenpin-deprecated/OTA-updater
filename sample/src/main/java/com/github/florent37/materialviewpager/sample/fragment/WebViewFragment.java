@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
+import com.github.florent37.materialpager.MaterialViewPagerHelper;
 import com.github.florent37.materialviewpager.sample.R;
 import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 

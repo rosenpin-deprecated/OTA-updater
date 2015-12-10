@@ -11,8 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 
 import com.crashlytics.android.Crashlytics;
-import com.github.florent37.materialviewpager.MaterialViewPager;
-import com.github.florent37.materialviewpager.header.HeaderDesign;
+import com.github.florent37.materialpager.MaterialViewPager;
+import com.github.florent37.materialpager.header.HeaderDesign;
 import com.github.florent37.materialviewpager.sample.BuildConfig;
 import com.github.florent37.materialviewpager.sample.R;
 import com.github.florent37.materialviewpager.sample.fragment.RecyclerViewFragment;

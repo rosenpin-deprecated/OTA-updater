@@ -1,4 +1,4 @@
-package com.github.florent37.materialviewpager;
+package com.github.florent37.materialpager;
 
 import android.content.Context;
 import android.graphics.Color;

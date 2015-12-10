@@ -1,4 +1,4 @@
-package com.github.florent37.materialviewpager.header;
+package com.github.florent37.materialpager.header;
 
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
