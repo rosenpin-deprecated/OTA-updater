@@ -2,7 +2,6 @@ package com.github.florent37.materialviewpager.sample.utils;
 
 import android.app.Activity;
 import android.app.ActivityOptions;
-import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,7 +22,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import com.github.florent37.materialviewpager.sample.Activities.ViewUpdateActivity;
 import com.github.florent37.materialviewpager.sample.R;

@@ -22,14 +22,13 @@ import java.util.List;
 /**
  * Created by tomer on 11/4/14.
  */
-public class Alarm extends BroadcastReceiver
-{
+public class Alarm extends BroadcastReceiver {
     ArrayList<String> builds = new ArrayList<String>();
     int TimeToSleep;
     Context Context;
+
     @Override
-    public void onReceive(Context context, Intent intent)
-    {
+    public void onReceive(Context context, Intent intent) {
         this.Context = context;
         PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
         PowerManager.WakeLock wl = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "");
@@ -37,7 +36,7 @@ public class Alarm extends BroadcastReceiver
 
         Parse.initialize(context, "LEuTfc5BQIC9E89F9u0J5ZfwZeGibiYTutcqK41j", "kQQ9CS4Wb7DzF4qooYodTHSmU1RFGfJNLthjzxHZ");
         TimeToSleep = Resources.DelayTimeUpdate(context);
-        Log.d("Time is ",String.valueOf(TimeToSleep));
+        Log.d("Time is ", String.valueOf(TimeToSleep));
         checkForUpdate();
 
 
@@ -46,13 +45,13 @@ public class Alarm extends BroadcastReceiver
         wl.release();
     }
 
-    public void SetAlarm(Context context)
-    {
-        AlarmManager am=(AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
+    public void SetAlarm(Context context) {
+        AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         Intent i = new Intent(context, Alarm.class);
         PendingIntent pi = PendingIntent.getBroadcast(context, 0, i, 0);
         am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), TimeToSleep, pi); // Millisec * Second * Minute
     }
+
     private void checkForUpdate() {
         ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(Resources.DeviceModel());
         query.findInBackground(new FindCallback<ParseObject>() {

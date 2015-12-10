@@ -38,15 +38,11 @@ import java.util.List;
  */
 public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecyclerViewAdapter.CardViewHolder> {
 
-    List<ParseObject> contents;
-    public static String DEVICE, ROM_VERSION, ANDROID_VERSION, KERNEL;
-    private Activity context;
     static final int TYPE_HEADER = 0;
     static final int TYPE_CELL = 1;
-
-    public static String getString(Activity context, int id) {
-        return context.getResources().getString(id);
-    }
+    public static String DEVICE, ROM_VERSION, ANDROID_VERSION, KERNEL;
+    List<ParseObject> contents;
+    private Activity context;
 
     public CardsRecyclerViewAdapter(List<ParseObject> contents, Activity context) {
         this.contents = contents;
@@ -57,6 +53,11 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
         ANDROID_VERSION = getString(context, R.string.android_version);
         KERNEL = getString(context, R.string.kernel);
     }
+
+    public static String getString(Activity context, int id) {
+        return context.getResources().getString(id);
+    }
+
     @Override
     public int getItemViewType(int position) {
         switch (position) {
@@ -66,6 +67,7 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
                 return TYPE_CELL;
         }
     }
+
     @Override
     public int getItemCount() {
         return contents.size();
@@ -99,7 +101,7 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
     }
 
     @Override
-    public void onBindViewHolder(final CardViewHolder holder,final int position) {
+    public void onBindViewHolder(final CardViewHolder holder, final int position) {
         switch (getItemViewType(position)) {
             case TYPE_HEADER:
 
@@ -140,13 +142,14 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder {
-        TextView title,changelog,sysInfo;
+        TextView title, changelog, sysInfo;
         DownloadProgressBar downloadButton;
         CardView background;
+
         CardViewHolder(final View itemView) {
             super(itemView);
-            sysInfo = (TextView)itemView.findViewById(R.id.info);
-            title = (TextView)itemView.findViewById(R.id.text);
+            sysInfo = (TextView) itemView.findViewById(R.id.info);
+            title = (TextView) itemView.findViewById(R.id.text);
             changelog = (TextView) itemView.findViewById(R.id.changelog);
             downloadButton = (DownloadProgressBar) itemView.findViewById(R.id.download);
             background = (CardView) itemView.findViewById(R.id.item_back);

@@ -10,8 +10,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
 import com.github.florent37.materialviewpager.MaterialViewPagerHelper;
-import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 import com.github.florent37.materialviewpager.sample.R;
+import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 
 /**
  * Created by florentchampigny on 24/04/15.
@@ -43,6 +43,7 @@ public class WebViewFragment extends Fragment {
             public void onPageFinished(WebView view, String url) {
                 MaterialViewPagerHelper.injectHeader(mWebView, true);
             }
+
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);

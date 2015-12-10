@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public HeaderDesign getHeaderDesign(int page) {
                 return HeaderDesign.fromColorAndDrawable(
-                        getResources().getColor(R.color.primary_color),null);
+                        getResources().getColor(R.color.primary_color), null);
             }
         });
 

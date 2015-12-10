@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">מעדכן</string>
     <string name="settings">הגדרות</string>
+    <string name="about">אודות</string>
     <string name="version">גירסא</string>
     <string name="loading">טוען</string>
     <string name="download">הורד &amp; התקן</string>

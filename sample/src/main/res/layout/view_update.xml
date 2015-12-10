@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dpv="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="70dp"
-    android:layout_marginBottom="50dp"
-    android:gravity="center"
     android:layout_gravity="center_vertical"
+    android:layout_marginBottom="50dp"
+    android:layout_marginTop="70dp"
+    android:gravity="center"
     android:orientation="vertical"
     android:transitionName="back"
     card_view:cardCornerRadius="4dp"
@@ -19,17 +18,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:paddingTop="40dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingBottom="0dp"
+        android:paddingTop="40dp"
         android:weightSum="10">
 
         <TextView
-            android:layout_weight="3"
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="3"
             android:paddingEnd="16dp"
             android:paddingStart="16dp"
             android:text="Version XXX"
@@ -37,9 +36,9 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:paddingEnd="16dp"
             android:paddingStart="16dp"
             android:paddingTop="7dp"
@@ -49,10 +48,10 @@
             android:textStyle="bold" />
 
         <TextView
-            android:layout_weight="1"
             android:id="@+id/changelog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:paddingBottom="15dp"
             android:paddingEnd="16dp"
             android:paddingStart="16dp"
@@ -65,17 +64,16 @@
             android:layout_width="70dp"
             android:layout_height="56dp"
             android:layout_gravity="center_horizontal"
+            android:layout_weight="8"
             dpv:circleBackgroundColor="@color/colorPrimary"
+            dpv:circleRadius="24dp"
+            dpv:drawingColor="@color/colorPrimary"
+            dpv:lineWidth="3dp"
+            dpv:overshootValue="2.5"
             dpv:progressBackgroundColor="@android:color/darker_gray"
             dpv:progressColor="@color/colorPrimary"
-            dpv:drawingColor="@color/colorPrimary"
             dpv:progressDuration="2000"
             dpv:resultDuration="5000"
-            android:layout_weight="8"
-            dpv:circleRadius="24dp"
-            dpv:lineWidth="3dp"
-            dpv:strokeWidth="3dp"
-            dpv:overshootValue="2.5"
-            />
+            dpv:strokeWidth="3dp" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

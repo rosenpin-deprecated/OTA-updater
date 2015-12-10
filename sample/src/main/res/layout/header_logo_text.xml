@@ -3,7 +3,7 @@
     android:id="@+id/logo_white"
     android:layout_width="100dp"
     android:layout_height="@dimen/materialviewpager_logoHeight"
-    android:text="This is my logo"
-    android:textSize="45sp"
     android:background="@android:color/white"
-    android:textColor="@android:color/white"/>
+    android:text="This is my logo"
+    android:textColor="@android:color/white"
+    android:textSize="45sp" />

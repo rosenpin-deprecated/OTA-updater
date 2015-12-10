@@ -26,15 +26,18 @@ import java.util.List;
  */
 public class RecyclerViewFragment extends Fragment {
 
+    private static final int ITEM_COUNT = 10;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
-
-    private static final int ITEM_COUNT = 10;
-
     private List<Object> mContentItems = new ArrayList<>();
 
     public static RecyclerViewFragment newInstance() {
         return new RecyclerViewFragment();
+    }
+
+    public static String DeviceModel() {
+        //return Build.PRODUCT;
+        return "hammerhead";
     }
 
     @Override
@@ -55,7 +58,7 @@ public class RecyclerViewFragment extends Fragment {
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> parseObjects, com.parse.ParseException e) {
-                mAdapter = new RecyclerViewMaterialAdapter(new CardsRecyclerViewAdapter(parseObjects,getActivity()));
+                mAdapter = new RecyclerViewMaterialAdapter(new CardsRecyclerViewAdapter(parseObjects, getActivity()));
                 mRecyclerView.setAdapter(mAdapter);
 
                 MaterialViewPagerHelper.registerRecyclerView(getActivity(), mRecyclerView, null);
@@ -65,11 +68,7 @@ public class RecyclerViewFragment extends Fragment {
 
     }
 
-    public static String DeviceModel() {
-        //return Build.PRODUCT;
-        return "hammerhead";
-    }
-    public RecyclerView getmRecyclerView(){
+    public RecyclerView getmRecyclerView() {
         return this.mRecyclerView;
     }
 }

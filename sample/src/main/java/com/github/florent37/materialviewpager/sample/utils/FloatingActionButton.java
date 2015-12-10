@@ -12,7 +12,6 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -25,8 +24,6 @@ import android.widget.FrameLayout;
 import android.widget.ListView;
 
 import com.github.florent37.materialviewpager.sample.R;
-
-import java.util.List;
 
 
 public class FloatingActionButton extends View {
@@ -142,9 +139,11 @@ public class FloatingActionButton extends View {
             mHidden = true;
         }
     }
-    public void listenTo(ListView lv){
+
+    public void listenTo(ListView lv) {
         lv.setOnScrollListener(new AbsListView.OnScrollListener() {
             int mLastFirstVisibleItem;
+
             @Override
             public void onScrollStateChanged(AbsListView view, int i) {
 
@@ -154,21 +153,20 @@ public class FloatingActionButton extends View {
             public void onScroll(AbsListView view, int firstVisibleItem,
                                  int visibleItemCount, int totalItemCount) {
 
-                if(mLastFirstVisibleItem<firstVisibleItem)
-                {
+                if (mLastFirstVisibleItem < firstVisibleItem) {
                     hideFloatingActionButton();
                     Log.i("SCROLLING DOWN ", "TRUE");
                 }
-                if(mLastFirstVisibleItem>firstVisibleItem)
-                {
+                if (mLastFirstVisibleItem > firstVisibleItem) {
                     showFloatingActionButton();
                     Log.i("SCROLLING UP ", "TRUE");
                 }
-                mLastFirstVisibleItem=firstVisibleItem;
+                mLastFirstVisibleItem = firstVisibleItem;
 
             }
         });
     }
+
     public void showFloatingActionButton() {
         if (mHidden) {
             ObjectAnimator scaleX = ObjectAnimator.ofFloat(this, "scaleX", 0, 1);
@@ -184,7 +182,7 @@ public class FloatingActionButton extends View {
     }
 
     public void Toggle() {
-        if(mHidden){
+        if (mHidden) {
             ObjectAnimator scaleX = ObjectAnimator.ofFloat(this, "scaleX", 0, 1);
             ObjectAnimator scaleY = ObjectAnimator.ofFloat(this, "scaleY", 0, 1);
             AnimatorSet animSetXY = new AnimatorSet();
@@ -193,8 +191,7 @@ public class FloatingActionButton extends View {
             animSetXY.setDuration(200);
             animSetXY.start();
             mHidden = false;
-        }
-        else{
+        } else {
             ObjectAnimator scaleX = ObjectAnimator.ofFloat(this, "scaleX", 1, 0);
             ObjectAnimator scaleY = ObjectAnimator.ofFloat(this, "scaleY", 1, 0);
             AnimatorSet animSetXY = new AnimatorSet();
@@ -235,7 +232,6 @@ public class FloatingActionButton extends View {
             this.gravity = gravity;
             return this;
         }
-
 
 
         /**
@@ -289,8 +285,8 @@ public class FloatingActionButton extends View {
         // The calculation (value * scale + 0.5f) is a widely used to convert to dps to pixel units
         // based on density scale
         // see developer.android.com (Supporting Multiple Screen Sizes)
-        private int convertToPixels(int dp, float scale){
-            return (int) (dp * scale + 0.5f) ;
+        private int convertToPixels(int dp, float scale) {
+            return (int) (dp * scale + 0.5f);
         }
     }
 }

@@ -3,15 +3,9 @@ package com.github.florent37.materialviewpager.sample.Activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.ArcMotion;
 import android.transition.AutoTransition;
-import android.transition.ChangeBounds;
-import android.transition.ChangeClipBounds;
-import android.transition.Slide;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.github.florent37.materialviewpager.sample.R;
@@ -26,6 +20,7 @@ public class ViewUpdateActivity extends Activity {
     TextView info;
     DownloadProgressBar download;
     TextView changelog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
